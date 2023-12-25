@@ -26,12 +26,12 @@ def scrape_links(website):
         if href not in urls:
             urls.add(href)
 
-            with open("urls.txt", "r") as file:
+            with open("../urls.txt", "r") as file:
                 text = file.readlines()
                 for idx, line in enumerate(text):
                     text[idx] = line.strip("\n")
 
-            with open("urls.txt", "a") as file:
+            with open("../urls.txt", "a") as file:
                 if href not in text:
                     file.writelines(href + "\n")
                 else:

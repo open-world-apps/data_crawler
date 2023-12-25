@@ -4,11 +4,11 @@ from urllib.parse import urlparse
 counter = 0
 
 def delete_line(data):
-    with open("urls.txt", "w") as file:
+    with open("../urls.txt", "w") as file:
         for line in data:
             file.write(line)
 
-with open("urls.txt", "r") as file:
+with open("../urls.txt", "r") as file:
     data = file.readlines()
     wayback = "https://web.archive.org/save/"
 
